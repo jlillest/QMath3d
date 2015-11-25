@@ -37,4 +37,12 @@ DynamicLibrary {
         condition: qbs.targetOS.contains("windows")
         cpp.defines: ["Q_MATH_3D"]
     }
+
+    Properties {
+        condition: qbs.targetOS.contains("linux")
+        cpp.defines: [
+			"Q_MATH_3D",
+			"QT_NO_DEBUG_OUTPUT"
+		     ]
+    }
 }
